@@ -128,8 +128,6 @@ Then run:
 brew bundle --file=./Brewfile
 ```
 
-> **Note:** The team maintains a shared `Brewfile` in the `dev-setup` repo. Clone it and run `brew bundle` to get everything at once.
-
 ---
 
 ## Keeping things up to date
