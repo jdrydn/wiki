@@ -95,8 +95,6 @@ $ echo 'export HOMEBREW_CASK_OPTS="--appdir=~/Applications"' >> ~/.zprofile
 $ source ~/.zprofile
 ```
 
----
-
 ## Using a Brewfile (recommended)
 
 A `Brewfile` lets you declare all your packages in a single file and install them in one shot — great for reproducible setups.
@@ -128,8 +126,6 @@ Then run:
 brew bundle --file=./Brewfile
 ```
 
----
-
 ## Keeping things up to date
 
 Run these periodically (or set a weekly reminder):
@@ -144,8 +140,6 @@ To clean up old versions and free disk space:
 brew cleanup
 ```
 
----
-
 ## Troubleshooting
 
 | Problem | Fix |
@@ -154,8 +148,6 @@ brew cleanup
 | Permission errors | Never use `sudo` with Homebrew. Run `brew doctor` and follow its suggestions. |
 | Package won't install | Run `brew update` first, then retry. Check `brew doctor` for warnings. |
 | Conflicting versions | Use `brew link --overwrite <package>` carefully, or uninstall the conflicting version first. |
-
----
 
 ## Useful links
 
