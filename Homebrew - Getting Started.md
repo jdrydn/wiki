@@ -78,7 +78,6 @@ Homebrew can also install desktop applications (browsers, editors, etc.) via **C
 
 ```bash
 brew install --cask visual-studio-code
-brew install --cask docker
 brew install --cask slack
 brew install --cask 1password
 ```
@@ -115,10 +114,11 @@ brew "python@3.12"
 brew "jq"
 brew "awscli"
 brew "gh"
+brew "docker" # the CLI, not the Desktop app
+brew "colima" # much better than Docker Desktop
 
 # Desktop apps
 cask "visual-studio-code"
-cask "docker"
 cask "slack"
 ```
 
