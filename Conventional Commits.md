@@ -23,8 +23,9 @@ chore(deps): updated dependencies
 
 ## Commit Types
 
-| `build` | Changes that affect the build system or external dependencies (example scopes: Docker, npm, CDK) |
+| Type | Description |
 | --- | --- |
+| `build` | Changes that affect the build system or external dependencies (example scopes: Docker, npm, CDK) |
 | `ci` | Changes to CI configuration files and scripts (example scopes: Github, CodePipeline) |
 | `chore` | **Changes which doesn't change source code or tests e.g. changes to the build process, auxiliary tools, libraries** |
 | `docs` | Documentation only changes |
