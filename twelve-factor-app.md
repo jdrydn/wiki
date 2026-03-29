@@ -11,22 +11,7 @@ description: >-
 
 ### Quick Reference
 
-| #       | Factor                                                                                                     | Tagline                                                |
-| ------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| **I**   | [**Codebase**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#i-codebase)                     | **One codebase, many deploys**                         |
-| **II**  | [**Dependencies**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#ii-dependencies)            | **Explicitly declare and isolate dependencies**        |
-| **III** | [**Config**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#iii-config)                       | **Store config in the environment**                    |
-| IV      | [Backing Services](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#iv-backing-services)        | Treat backing services as attached resources           |
-| **V**   | [**Build, Release, Run**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#v-build-release-run) | **Strictly separate build and run stages**             |
-| **VI**  | [**Processes**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#vi-processes)                  | **Execute the app as one or more stateless processes** |
-| VII     | [Port Binding](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#vii-port-binding)               | Export services via port binding                       |
-| VIII    | [Concurrency](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#viii-concurrency)                | Scale out via the process model                        |
-| **IX**  | [**Disposability**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#ix-disposability)          | **Fast startup and graceful shutdown**                 |
-| **X**   | [**Dev/Prod Parity**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#x-devprod-parity)        | **Keep environments as similar as possible**           |
-| **XI**  | [**Logs**](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#xi-logs)                            | **Treat logs as event streams**                        |
-| XII     | [Admin Processes](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#xii-admin-processes)         | Run admin tasks as one-off processes                   |
-
-**Bold rows** = highest day-to-day impact for most teams.
+<table><thead><tr><th width="73.38671875">#</th><th width="193.5625">Factor</th><th>Tagline</th></tr></thead><tbody><tr><td>I</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#i-codebase">Codebase</a></td><td>One codebase, many deploys</td></tr><tr><td>II</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#ii-dependencies">Dependencies</a></td><td>Explicitly declare and isolate dependencies</td></tr><tr><td>III</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#iii-config">Config</a></td><td>Store config in the environment</td></tr><tr><td>IV</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#iv-backing-services">Backing Services</a></td><td>Treat backing services as attached resources</td></tr><tr><td>V</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#v-build-release-run">Build, Release, Run</a></td><td>Strictly separate build and run stages</td></tr><tr><td>VI</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#vi-processes">Processes</a></td><td>Execute the app as one or more stateless processes</td></tr><tr><td>VII</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#vii-port-binding">Port Binding</a></td><td>Export services via port binding</td></tr><tr><td>VIII</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#viii-concurrency">Concurrency</a></td><td>Scale out via the process model</td></tr><tr><td>IX</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#ix-disposability">Disposability</a></td><td>Fast startup and graceful shutdown</td></tr><tr><td>X</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#x-devprod-parity">Dev/Prod Parity</a></td><td>Keep environments as similar as possible</td></tr><tr><td>XI</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#xi-logs">Logs</a></td><td>Treat logs as event streams</td></tr><tr><td>XII</td><td><a href="https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#xii-admin-processes">Admin Processes</a></td><td>Run admin tasks as one-off processes</td></tr></tbody></table>
 
 ***
 
@@ -34,7 +19,7 @@ description: >-
 
 One repo per app. One-to-many relationship: one codebase → many deploys (prod, staging, local).
 
-* Multiple apps sharing code → extract a shared [library](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#ii-dependencies), don't share a repo
+* Multiple apps sharing code → extract a shared library, don't share a repo
 * Multiple codebases in one repo → that's a distributed system, not one app
 * One repo can have multiple deployables, if those deployables still build out the same app
 
@@ -71,7 +56,7 @@ Everything that varies between deploys (dev, staging, prod) belongs in environme
 
 **Fails the test:**
 
-```python
+```dotenv
 # hardcoded — violates factor III
 DB_URL = "postgres://user:pass@prod-db.internal/myapp"
 ```
@@ -93,14 +78,14 @@ DB_URL = os.environ["DATABASE_URL"]
 
 Treat databases, caches, queues, and external APIs as _attached resources_ — swappable via config with no code changes.
 
-```
+```dotenv
 # Both are "databases" to the app — only the URL changes
-DATABASE_URL=postgres://localhost/dev
-DATABASE_URL=postgres://user:pass@rds.amazonaws.com/prod
+DATABASE_URL="postgres://localhost/dev"
+DATABASE_URL="postgres://user:pass@rds.amazonaws.com/prod"
 
 # Same for third-party services
-SMTP_URL=smtp://localhost:1025          # local mailhog
-SMTP_URL=smtp://user:pass@smtp.sendgrid.net:587
+SMTP_URL="smtp://localhost:1025"          # local mailhog
+SMTP_URL="smtp://user:pass@smtp.sendgrid.net:587"
 ```
 
 Local and third-party services are treated identically. A production DB can be swapped for a replica with no code changes.
@@ -136,7 +121,7 @@ This maps directly to Docker: `docker build` → tag+push → `docker run`.
 
 The app runs as one or more **stateless, share-nothing** processes.
 
-* Any data that needs to persist must go to a [backing service](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#iv-backing-services) (DB, cache, object store)
+* Any data that needs to persist must go to a backing service (DB, cache, object store)
 * Never assume in-memory state or local disk is available on the next request
 * Sticky sessions violate this factor — use a shared session store (Redis, etc.) instead
 
@@ -176,8 +161,8 @@ clock process:  handles scheduled tasks   → typically single instance
 ```
 
 * Design your process types (web, worker, etc.) to be independently scalable
-* Avoid writing daemons or PID files — let the process manager (systemd, Kubernetes, Heroku dynos) handle lifecycle
-* Pairs with [Factor VI](https://claude.ai/chat/a8abcfd1-099f-4e18-84a4-e51224de15ed#vi-processes): stateless processes are trivially horizontally scalable
+* Avoid writing daemons or PID files — let the process manager (systemd, Docker, ECS) handle lifecycle
+* Pairs with Factor VI: stateless processes are trivially horizontally scalable
 
 ***
 
@@ -246,7 +231,7 @@ logging.FileHandler("/var/log/myapp/app.log")
 ```
 
 * In development: stream to terminal
-* In production: captured by the execution environment (Docker, Kubernetes) and routed to a log aggregator (Datadog, CloudWatch, Loki, Splunk)
+* In production: captured by the execution environment (e.g. Docker, ECS) and routed to a log aggregator (CloudWatch, New Relic, etc.)
 * Structured JSON logs make querying and alerting much easier
 
 ***
@@ -283,11 +268,3 @@ kubectl exec -it deploy/myapp -- python scripts/backfill_user_ids.py
 | App writes logs to `/var/log/app.log`                   | XI — Logs                           |
 | `db.sqlite3` used locally, Postgres in prod             | X — Dev/Prod Parity                 |
 | Migration steps documented in Confluence, not automated | XII — Admin Processes               |
-
-***
-
-### Related Pages
-
-* `Docker-Cheatsheet.md` — containerization maps closely to factors V, VI, VII, IX
-* `Environment-Variables.md` — deep dive on factor III tooling
-* `CI-CD-Pipelines.md` — automating the build/release/run pipeline (factor V)
