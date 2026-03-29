@@ -5,3 +5,4 @@
 * [Homebrew - Getting Started](<Homebrew - Getting Started.md>)
 * [Terminal One-Liners](<Terminal One-Liners.md>)
 * [license](license.md)
+* [Twelve-Factor App](twelve-factor-app.md)
