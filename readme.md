@@ -2,7 +2,7 @@
 
 > "If you're not learning, you're not moving forwards."
 
-Reference documents on things I've learned, use regularly, or keep having to look up. Focused on CLI tooling, Git, AWS, and TypeScript/Node — but anything goes.
+Reference documents on things I've learned, use regularly, or keep having to look up. Focused on CLI tooling, Git, AWS, and TypeScript/Node - but anything goes.
 
 If something tripped me up, cost me an afternoon, or turned out to be simpler than I expected, it probably ended up here.
 
@@ -13,7 +13,7 @@ Most documents follow the same pattern: quick examples first, explanation second
 Topics lean towards:
 
 * **CLI & Terminal** — one-liners, shell tricks, tools I reach for daily
-* **Git & version control** — workflows, commands, conventions like Conventional Commits
+* **Git & version control** — workflows, commands, conventions, etc
 * **AWS & cloud infrastructure** — services, patterns, tradeoffs I've worked through
 * **TypeScript & Node** — syntax references, gotchas, setup decisions
 
@@ -23,6 +23,8 @@ Partly so I can find things again. Partly because if I had to figure it out, som
 
 Everything here reflects how I actually work - opinionated in places, incomplete in others. If something's wrong or out of date, please open an issue.
 
+The information in this repository is **public-knowledge** or **AI-generated**, there are no private knowledge or company-specific details.
+
 ## Archived
 
-Some items are [archived](./Archived/) - typically because I've not needed that in a very long time.
+Some items are [archived](./Archived/) - typically because I've not needed them in a very long time.
