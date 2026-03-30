@@ -1,18 +1,14 @@
----
-hidden: true
----
-
 # James's Wiki
 
 > "If you're not learning, you're not moving forwards."
 
-Reference pages on things I've learned, use regularly, or keep having to look up. Focused on CLI tooling, Git, AWS, and TypeScript/Node — but anything goes.
+Reference documents on things I've learned, use regularly, or keep having to look up. Focused on CLI tooling, Git, AWS, and TypeScript/Node — but anything goes.
 
 If something tripped me up, cost me an afternoon, or turned out to be simpler than I expected, it probably ended up here.
 
 ### What's in here
 
-Most pages follow the same pattern: quick examples first, explanation second. This is a cheat sheet, not a tutorial — if you need deep background, the upstream docs are usually linked at the top of each page.
+Most documents follow the same pattern: quick examples first, explanation second. This is a cheat sheet, not a tutorial — if you need deep background, the upstream references are usually linked at the top of each document.
 
 Topics lean towards:
 
