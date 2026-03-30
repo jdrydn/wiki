@@ -1,3 +1,8 @@
+---
+title: Homebrew - Getting Started
+description: Installing and using Homebrew on macOS — essential commands, Cask for GUI apps, and Brewfile for reproducible setups.
+---
+
 # Homebrew - Getting Started
 
 ## What is Homebrew?
