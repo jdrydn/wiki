@@ -4,8 +4,8 @@ A handy page to list useful command-line one-liners!
 
 ## Create a MongoDB Object ID, fast!
 
-Requires [node](https://nodejs.org) & either [mongodb](https://npm.im/mongodb) or [mongoose](https://npm.im/mongoose)
-to be installed.
+Requires [node](https://nodejs.org) & either [mongodb](https://npm.im/mongodb) or [mongoose](https://npm.im/mongoose) to
+be installed.
 
 ```sh
 $ node -pe '(m => new m.ObjectId().toString())(require("mongodb"))'

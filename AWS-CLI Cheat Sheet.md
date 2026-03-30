@@ -202,8 +202,7 @@ eval $(aws sts assume-role \
 
 ## `--query` cheatsheet
 
-AWS CLI uses [JMESPath](https://jmespath.org/) for `--query`. These patterns
-cover most use cases:
+AWS CLI uses [JMESPath](https://jmespath.org/) for `--query`. These patterns cover most use cases:
 
 | Pattern                 | Example                                         |
 | ----------------------- | ----------------------------------------------- |
@@ -213,5 +212,4 @@ cover most use cases:
 | **Get a tag by key**    | `--query 'Tags[?Key==\`Name\`].Value\|[0]'`     |
 | **Flatten nested list** | `--query 'Reservations[].Instances[]'`          |
 
-Pair with `--output text` for shell scripting, `--output table` for readability,
-`--output json` for piping into `jq`.
+Pair with `--output text` for shell scripting, `--output table` for readability, `--output json` for piping into `jq`.

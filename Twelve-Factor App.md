@@ -22,9 +22,9 @@
 
 One repo per app. One-to-many relationship: one codebase → many deploys (prod, staging, local).
 
-* Multiple apps sharing code → extract a shared library, don't share a repo
-* Multiple codebases in one repo → that's a distributed system, not one app
-* One repo can have multiple deployables, if those deployables still build out the same app
+- Multiple apps sharing code → extract a shared library, don't share a repo
+- Multiple codebases in one repo → that's a distributed system, not one app
+- One repo can have multiple deployables, if those deployables still build out the same app
 
 ```
 repo/
@@ -46,12 +46,14 @@ Declare all dependencies explicitly in a manifest. Never rely on implicit system
 | Go       | `go.mod`                              | module cache            |
 | Java     | `pom.xml` / `build.gradle`            | Maven/Gradle local repo |
 
-* System tools your app shells out to (e.g. `curl`, `ImageMagick`) should also be declared — vendored or ensured via a build step
-* A clean checkout + dependency install must be sufficient to run the app
+- System tools your app shells out to (e.g. `curl`, `ImageMagick`) should also be declared — vendored or ensured via a
+  build step
+- A clean checkout + dependency install must be sufficient to run the app
 
 ## 3 - Config
 
-Everything that varies between deploys (dev, staging, prod) belongs in environment variables — never in code or checked-in config files.
+Everything that varies between deploys (dev, staging, prod) belongs in environment variables — never in code or
+checked-in config files.
 
 **Fails the test:**
 
@@ -67,9 +69,9 @@ import os
 DB_URL = os.environ["DATABASE_URL"]
 ```
 
-* `.env` files are fine locally; use your platform's secret management in production (AWS SSM, Vault, Doppler, etc.)
-* Do **not** group config into named environments (`config/production.py`) — this doesn't scale as environments multiply
-* Config that doesn't change between deploys (e.g. internal routing constants) can live in code
+- `.env` files are fine locally; use your platform's secret management in production (AWS SSM, Vault, Doppler, etc.)
+- Do **not** group config into named environments (`config/production.py`) — this doesn't scale as environments multiply
+- Config that doesn't change between deploys (e.g. internal routing constants) can live in code
 
 ## 4 - Backing Services
 
@@ -85,7 +87,8 @@ SMTP_URL="smtp://localhost:1025"          # local mailhog
 SMTP_URL="smtp://user:pass@smtp.sendgrid.net:587"
 ```
 
-Local and third-party services are treated identically. A production DB can be swapped for a replica with no code changes.
+Local and third-party services are treated identically. A production DB can be swapped for a replica with no code
+changes.
 
 ## 5 - Build, Release, Run
 
@@ -104,9 +107,9 @@ Source code
 [RUN]      Execute release in environment (process manager, container runtime)
 ```
 
-* Releases are **immutable** — never modify a running release; create a new one
-* Every release should have a unique ID (timestamp or incrementing number)
-* Rollback = activate a previous release
+- Releases are **immutable** — never modify a running release; create a new one
+- Every release should have a unique ID (timestamp or incrementing number)
+- Rollback = activate a previous release
 
 This maps directly to Docker: `docker build` → tag+push → `docker run`.
 
@@ -114,9 +117,9 @@ This maps directly to Docker: `docker build` → tag+push → `docker run`.
 
 The app runs as one or more **stateless, share-nothing** processes.
 
-* Any data that needs to persist must go to a backing service (DB, cache, object store)
-* Never assume in-memory state or local disk is available on the next request
-* Sticky sessions violate this factor — use a shared session store (Redis, etc.) instead
+- Any data that needs to persist must go to a backing service (DB, cache, object store)
+- Never assume in-memory state or local disk is available on the next request
+- Sticky sessions violate this factor — use a shared session store (Redis, etc.) instead
 
 ```python
 # Bad: local disk as durable storage
@@ -136,8 +139,8 @@ uvicorn main:app --host 0.0.0.0 --port $PORT   # Python/FastAPI
 node server.js                                  # Node (listens on process.env.PORT)
 ```
 
-* In production, a routing layer (load balancer, reverse proxy) sits in front and forwards traffic
-* This also means one app can become a backing service for another — just point to its URL
+- In production, a routing layer (load balancer, reverse proxy) sits in front and forwards traffic
+- This also means one app can become a backing service for another — just point to its URL
 
 ## 8 - Concurrency
 
@@ -149,9 +152,9 @@ worker process: handles background jobs   → scale out for queue depth
 clock process:  handles scheduled tasks   → typically single instance
 ```
 
-* Design your process types (web, worker, etc.) to be independently scalable
-* Avoid writing daemons or PID files — let the process manager (systemd, Docker, ECS) handle lifecycle
-* Pairs with Factor VI: stateless processes are trivially horizontally scalable
+- Design your process types (web, worker, etc.) to be independently scalable
+- Avoid writing daemons or PID files — let the process manager (systemd, Docker, ECS) handle lifecycle
+- Pairs with Factor VI: stateless processes are trivially horizontally scalable
 
 ## 9 - Disposability
 
@@ -174,8 +177,8 @@ signal.signal(signal.SIGTERM, handle_sigterm)
 
 **For workers:** return in-progress jobs to the queue before exiting so another worker can pick them up.
 
-* Crash-only design: a process that crashes should be safe to restart at any time
-* Use idempotent job processing to handle unexpected restarts mid-task
+- Crash-only design: a process that crashes should be safe to restart at any time
+- Use idempotent job processing to handle unexpected restarts mid-task
 
 ## 10 - Dev/Prod Parity
 
@@ -193,7 +196,7 @@ Use Docker Compose or similar to run prod-equivalent services locally:
 # docker-compose.yml
 services:
   db:
-    image: postgres:16     # same version as prod
+    image: postgres:16 # same version as prod
   cache:
     image: redis:7
 ```
@@ -213,13 +216,15 @@ print(json.dumps({"level": "info", "msg": "request received", "path": "/api/user
 logging.FileHandler("/var/log/myapp/app.log")
 ```
 
-* In development: stream to terminal
-* In production: captured by the execution environment (e.g. Docker, ECS) and routed to a log aggregator (CloudWatch, New Relic, etc.)
-* Structured JSON logs make querying and alerting much easier
+- In development: stream to terminal
+- In production: captured by the execution environment (e.g. Docker, ECS) and routed to a log aggregator (CloudWatch,
+  New Relic, etc.)
+- Structured JSON logs make querying and alerting much easier
 
 ## 12 - Admin Processes
 
-Run one-off admin tasks (migrations, scripts, console sessions) as isolated processes using the same codebase and config as the app.
+Run one-off admin tasks (migrations, scripts, console sessions) as isolated processes using the same codebase and config
+as the app.
 
 ```bash
 # Django migration — same container image, same env vars
@@ -232,10 +237,10 @@ heroku run rails console --app my-production-app
 kubectl exec -it deploy/myapp -- python scripts/backfill_user_ids.py
 ```
 
-* These should ship in the same release as the app code — not a separate repo or manual procedure
-* Never run admin tasks against production via a local checkout with local config
+- These should ship in the same release as the app code — not a separate repo or manual procedure
+- Never run admin tasks against production via a local checkout with local config
 
-----
+---
 
 ## Common Violations Cheat Sheet
 

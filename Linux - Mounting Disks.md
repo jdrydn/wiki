@@ -2,7 +2,7 @@
 
 This is so difficult every time. Let's note this down.
 
-----
+---
 
 1. `lsblk` to identify the drives
 
@@ -48,6 +48,7 @@ sudo mkdir -p /mnt/disk3
 ```sh
 sudo nano /etc/fstab
 ```
+
 ```
 UUID=abcd-1234  /mnt/disk2  ext4  defaults  0  2
 UUID=efgh-5678  /mnt/disk3  ext4  defaults  0  2
