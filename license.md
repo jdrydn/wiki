@@ -1,10 +1,4 @@
----
-hidden: true
----
-
-# license
-
-MIT License
+**MIT License**
 
 Copyright (c) 2026 jdrydn
 
