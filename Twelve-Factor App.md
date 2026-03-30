@@ -1,8 +1,3 @@
----
-title: Twelve-Factor App
-description: A methodology for building portable, resilient, cloud-native SaaS applications. Language- and platform-agnostic.
----
-
 # Twelve-Factor App
 
 > **The Twelve Factor App**\
