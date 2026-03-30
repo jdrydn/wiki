@@ -8,6 +8,15 @@ and TypeScript/Node - but anything goes.
 If something tripped me up, cost me an afternoon, or turned out to be simpler than I expected, it probably ended up
 here.
 
+## Table of Contents
+
+- [AWS-CLI Cheat Sheet](./Entries/AWS-CLI%20Cheat%20Sheet.md)
+- [Conventional Commits](./Entries/Conventional%20Commits.md)
+- [Getting Started - Homebrew](./Entries/Getting%20Started%20-%20Homebrew.md)
+- [Linux - Mounting Disks](./Entries/Linux%20-%20Mounting%20Disks.md)
+- [Terminal One-Liners](./Entries/Terminal%20One-Liners.md)
+- [Twelve-Factor App](./Entries/Twelve-Factor%20App.md)
+
 ## What's in here
 
 Most documents follow the same pattern: quick examples first, explanation second. This is a cheat sheet, not a
