@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const localIcons: Record<string, string> = {
-  aws: '/Assets/icon-aws.png',
+  aws: '/assets/icon-aws.png',
 }
 
 const resolvedIcon = computed(() => {
