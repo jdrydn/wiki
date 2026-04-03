@@ -20,13 +20,14 @@ export default defineConfig({
     sidebar: generateSidebar([
       {
         scanStartPath: 'Entries',
-        basePath: '/Entries/',
-        resolvePath: '/Entries/',
+        basePath: '/entries/',
+        resolvePath: '/entries/',
         useTitleFromFileHeading: true,
       },
       {
         scanStartPath: 'Archived',
-        resolvePath: '/Archived/',
+        basePath: '/archived/',
+        resolvePath: '/archived/',
         useTitleFromFrontmatter: true,
       },
     ]),
