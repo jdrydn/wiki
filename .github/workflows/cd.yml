@@ -1,4 +1,4 @@
-name: Main Deploy
+name: CD
 
 on:
   push:
@@ -11,14 +11,13 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    concurrency:
+      group: cd-build
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -38,6 +37,9 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-github-pages
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
