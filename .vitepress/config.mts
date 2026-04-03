@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress';
-
-import items from './items';
+import { generateSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,27 +8,26 @@ export default defineConfig({
   appearance: false,
   lastUpdated: true,
   srcExclude: ['./readme.md', './license.md'],
+  head: [
+    ['link', { rel: 'icon', type: 'image/x-icon', href: 'https://jdrydn.com/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://jdrydn.com/favicons/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://jdrydn.com/favicons/favicon-16x16.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://jdrydn.com/favicons/apple-touch-icon.png' }],
+  ],
   themeConfig: {
-    sidebar: {
-      '/Entries/': [
-        {
-          text: 'Entries',
-          items: items.Entries.map(({ title, url }) => ({
-            text: title,
-            link: url,
-          })),
-        },
-      ],
-      '/Archived/': [
-        {
-          text: 'Archived',
-          items: items.Archived.map(({ title, url }) => ({
-            text: title,
-            link: url,
-          })),
-        },
-      ],
-    },
+    sidebar: generateSidebar([
+      {
+        scanStartPath: 'Entries',
+        basePath: '/Entries/',
+        resolvePath: '/Entries/',
+        useTitleFromFileHeading: true,
+      },
+      {
+        scanStartPath: 'Archived',
+        resolvePath: '/Archived/',
+        useTitleFromFrontmatter: true,
+      },
+    ]),
 
     socialLinks: [
       { icon: 'safari', link: 'https://jdrydn.com' },
