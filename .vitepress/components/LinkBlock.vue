@@ -225,6 +225,11 @@ a:hover {
   fill: currentColor;
 }
 
+p {
+  margin: 0;
+  line-height: inherit;
+}
+
 img {
   margin: 0;
   border-radius: inherit;
