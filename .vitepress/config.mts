@@ -41,9 +41,6 @@ export default defineConfig({
       pattern: 'https://github.com/jdrydn/wiki/edit/main/:path',
       text: 'Edit this page on GitHub',
     },
-    footer: {
-      message: 'Released under the MIT License',
-    },
     docFooter: {
       prev: false,
       next: false,
