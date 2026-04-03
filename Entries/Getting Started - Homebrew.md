@@ -19,8 +19,13 @@ Visit [Homebrew](https://brew.sh)'s website & run their installer:
 - This should be `install.sh` from their GitHub repository (`github.com/homebrew/install`)
 - For more information please see: [Installation](https://docs.brew.sh/Installation)
 - The script will explain what it plans to do and pause before making changes. Follow the on-screen prompts.
-- **If your user login is not the Admin, then you will need Admin access to your Mac for this step** - after this, you
-  can run as your local user.
+
+::: warning
+
+If your user login is not an Administrator, then **you will need Admin access to your Mac to install Homebrew** - after
+this, you can run `brew` commands as your local user.
+
+:::
 
 ### Apple Silicon (M-series) users
 
@@ -96,8 +101,8 @@ regular basis) then set the following env var in your profile to direct Homebrew
 instead:
 
 ```bash
-$ echo 'export HOMEBREW_CASK_OPTS="--appdir=~/Applications"' >> ~/.zprofile
-$ source ~/.zprofile
+echo 'export HOMEBREW_CASK_OPTS="--appdir=~/Applications"' >> ~/.zprofile
+source ~/.zprofile
 ```
 
 ## Using a Brewfile (recommended)
