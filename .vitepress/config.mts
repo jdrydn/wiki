@@ -32,12 +32,14 @@ export default defineConfig({
     },
 
     socialLinks: [
+      { icon: 'safari', link: 'https://jdrydn.com' },
       { icon: 'github', link: 'https://github.com/jdrydn' },
       { icon: 'threads', link: 'https://threads.net/@jdrydn' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/jdrydn' },
     ],
 
     editLink: {
-      pattern: 'https://github.com/jdrydn/wiki/edit/main/docs/:path',
+      pattern: 'https://github.com/jdrydn/wiki/edit/main/:path',
       text: 'Edit this page on GitHub',
     },
     footer: {
@@ -53,6 +55,11 @@ export default defineConfig({
         timeStyle: 'short',
         timeZone: 'Europe/London',
       },
+    },
+  },
+  markdown: {
+    anchor: {
+      permalink: undefined,
     },
   },
 });
