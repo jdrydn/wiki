@@ -9,8 +9,9 @@ export default createContentLoader(path.resolve(__dirname, '../archived/*.md'), 
     items
       .filter((item) => item.url !== '/archived/')
       .map((item) => {
-        const defaultTitle = path.basename(item.url, path.extname(item.url));
-        item.frontmatter.title = item.frontmatter.title || defaultTitle;
+        const filename = path.basename(item.url, path.extname(item.url));
+        const firstTitle = item.excerpt?.match(/<h1[^>]*>(.*?)<\/h1>/s)?.[1];
+        item.frontmatter.title = item.frontmatter.title || firstTitle || filename;
         return item;
       }),
 });

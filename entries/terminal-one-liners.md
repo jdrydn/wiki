@@ -1,4 +1,8 @@
-# Terminal One-Liners
+---
+title: Terminal One-Liners
+---
+
+# {{ $frontmatter.title }}
 
 A handy page to list useful command-line one-liners!
 
