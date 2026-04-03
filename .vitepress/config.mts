@@ -5,6 +5,7 @@ import { generateSidebar } from 'vitepress-sidebar';
 export default defineConfig({
   title: "James's Wiki",
   description: "If you're not learning, you're not moving forwards!",
+  lang: 'en-GB',
   appearance: false,
   lastUpdated: true,
   srcExclude: ['./readme.md', './license.md'],
