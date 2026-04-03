@@ -28,7 +28,7 @@ export default defineConfig({
         scanStartPath: 'archived',
         basePath: '/archived/',
         resolvePath: '/archived/',
-        useTitleFromFrontmatter: true,
+        useTitleFromFileHeading: true,
       },
     ]),
 

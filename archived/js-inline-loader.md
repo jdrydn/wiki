@@ -1,8 +1,4 @@
----
-title: JS - An inline loader
----
-
-# {{ $frontmatter.title }}
+# JS - An inline loader
 
 One upon a time, this was needed to load Javascript files on the frontend, after the page had fully loaded.
 

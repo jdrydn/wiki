@@ -1,8 +1,4 @@
----
-title: SVN - Extending the CLI
----
-
-# {{ $frontmatter.title }}
+# SVN - Extending the CLI
 
 Extending SVN's features to include common tasks such as tagging.
 
