@@ -1,3 +1,10 @@
+---
+sidebar: false
+aside: false
+editLink: false
+lastUpdated: false
+---
+
 <script setup>
 import { data as items } from './index.data';
 </script>

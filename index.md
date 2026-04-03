@@ -1,14 +1,17 @@
 ---
-layout: home
-
-hero:
-  name: James's Wiki
-  tagline: If you're not learning, you're not moving forwards!
+sidebar: false
+aside: false
+editLink: false
+lastUpdated: false
 ---
 
 <script setup>
 import { data as items } from './Entries/index.data';
 </script>
+
+# James's Wiki
+
+> "If you're not learning, you're not moving forwards."
 
 Reference documents on things I've learned, use regularly, or keep having to look up. Focused on CLI tooling, Git, AWS,
 and TypeScript/Node - but anything goes.

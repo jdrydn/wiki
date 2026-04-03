@@ -7,6 +7,8 @@ export default defineConfig({
   title: "James's Wiki",
   description: "If you're not learning, you're not moving forwards!",
   appearance: false,
+  lastUpdated: true,
+  srcExclude: ['./readme.md', './license.md'],
   themeConfig: {
     sidebar: {
       '/Entries/': [
@@ -44,6 +46,13 @@ export default defineConfig({
     docFooter: {
       prev: false,
       next: false,
+    },
+    lastUpdated: {
+      formatOptions: {
+        dateStyle: 'long',
+        timeStyle: 'short',
+        timeZone: 'Europe/London',
+      },
     },
   },
 });
