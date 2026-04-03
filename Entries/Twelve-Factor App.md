@@ -1,7 +1,8 @@
 # Twelve-Factor App
 
-> **The Twelve Factor App**\
-> [https://www.12factor.net](https://www.12factor.net/)
+<LinkBlock
+  href="https://www.12factor.net/"
+  title="The Twelve Factor App"/>
 
 ## Quick Reference
 

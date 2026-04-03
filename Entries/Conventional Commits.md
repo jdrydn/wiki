@@ -1,6 +1,8 @@
 # Conventional Commits
 
-[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+<LinkBlock
+  href="https://www.conventionalcommits.org/en/v1.0.0/"
+  title="Conventional Commits"/>
 
 ## Quick examples
 

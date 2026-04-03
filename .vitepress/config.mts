@@ -1,3 +1,4 @@
+import tailwind from '@tailwindcss/vite';
 import { defineConfig } from 'vitepress';
 import { generateSidebar } from 'vitepress-sidebar';
 
@@ -57,5 +58,8 @@ export default defineConfig({
     anchor: {
       permalink: undefined,
     },
+  },
+  vite: {
+    plugins: [tailwind()],
   },
 });
