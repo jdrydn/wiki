@@ -1,4 +1,5 @@
 ---
+navbar: false
 sidebar: false
 aside: false
 editLink: false
