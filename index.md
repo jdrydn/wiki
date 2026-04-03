@@ -7,7 +7,7 @@ lastUpdated: false
 ---
 
 <script setup>
-import { data as items } from './Entries/index.data';
+import { data as items } from './entries/index.data';
 </script>
 
 # James's Wiki
@@ -52,4 +52,4 @@ company-specific details.
 
 ## Archived
 
-Some items are [archived](./Archived/) - typically because I've not needed them in a very long time.
+Some items are [archived](./archived/) - typically because I've not needed them in a very long time.

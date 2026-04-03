@@ -19,13 +19,13 @@ export default defineConfig({
   themeConfig: {
     sidebar: generateSidebar([
       {
-        scanStartPath: 'Entries',
+        scanStartPath: 'entries',
         basePath: '/entries/',
         resolvePath: '/entries/',
         useTitleFromFileHeading: true,
       },
       {
-        scanStartPath: 'Archived',
+        scanStartPath: 'archived',
         basePath: '/archived/',
         resolvePath: '/archived/',
         useTitleFromFrontmatter: true,
