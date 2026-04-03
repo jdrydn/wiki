@@ -9,7 +9,7 @@ export default defineConfig({
   lastUpdated: true,
   srcExclude: ['./readme.md', './license.md'],
   head: [
-    ['link', { rel: 'icon', type: 'image/x-icon', href: 'https://jdrydn.com/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', href: 'https://jdrydn.com/favicons/favicon-16x16.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://jdrydn.com/favicons/favicon-32x32.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://jdrydn.com/favicons/favicon-16x16.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://jdrydn.com/favicons/apple-touch-icon.png' }],
