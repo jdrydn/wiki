@@ -1,14 +1,14 @@
 # AWS CLI One-Liners
 
 <LinkBlock
+  title="AWS CLI v2 Docs"
   href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html"
-  icon="aws"
-  title="AWS CLI v2 Docs"/>
+  icon="aws" variant="aws" />
 
 <LinkBlock
+  title="AWS CLI Command Reference"
   href="https://awscli.amazonaws.com/v2/documentation/api/latest/index.html"
-  icon="aws"
-  title="AWS CLI Command Reference"/>
+  icon="aws" variant="aws" />
 
 ## Setup
 

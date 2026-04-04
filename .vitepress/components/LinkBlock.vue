@@ -208,14 +208,12 @@ a {
   font-weight: inherit;
   color: inherit;
   text-decoration: none;
-  border-bottom: none;
   transition: none;
 }
 
 a:hover {
   color: inherit;
   text-decoration: none;
-  border-bottom: none;
 }
 
 .link-block-icon {
