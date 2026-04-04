@@ -1,6 +1,6 @@
-# Developer Experience
+# KYC Developer Experience
 
-Creating good experiences for your customers' developers.
+[Know your customer] enough to create a good experience for your customers' developers.
 
 ## TL;DR
 
