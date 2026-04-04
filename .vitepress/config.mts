@@ -55,6 +55,9 @@ export default defineConfig({
       },
     },
   },
+  sitemap: {
+    hostname: 'https://wiki.jdrydn.com',
+  },
   markdown: {
     anchor: {
       permalink: undefined,
