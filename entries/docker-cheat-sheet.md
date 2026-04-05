@@ -2,6 +2,7 @@
 
 <LinkBlock
   title="Docker reference documentation"
+  description="Find reference documentation for the Docker platform’s various APIs, CLIs, and file formats"
   href="https://docs.docker.com/reference/"
   icon="docker" variant="blue" />
 
