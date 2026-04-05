@@ -12,8 +12,8 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    name: Build
+  cd:
+    name: CD
     runs-on: ubuntu-latest
     concurrency:
       group: cd-build
@@ -38,7 +38,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     concurrency:
-      group: deploy-github-pages
+      group: cd-deploy
       cancel-in-progress: false
     environment:
       name: github-pages

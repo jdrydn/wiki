@@ -9,8 +9,8 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    name: Build
+  ci:
+    name: CI
     runs-on: ubuntu-latest
     concurrency:
       group: pr-${{ github.event.number }}-build
