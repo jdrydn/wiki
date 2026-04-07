@@ -1,5 +1,8 @@
 ---
-navbar: false
+title: James's Wiki
+description: >
+  Reference documents on things I've learned, use regularly, or keep having to look up. Focused on CLI tooling, Git,
+  AWS, and TypeScript/Node - but anything goes.
 sidebar: false
 aside: false
 editLink: false
@@ -10,9 +13,10 @@ lastUpdated: false
 import { data as items } from './entries/index.data';
 </script>
 
-# James's Wiki
-
-> "If you're not learning, you're not moving forwards."
+<LinkBlock
+  title="jdrydn"
+  description="Engineer at heart, found working on products, projects, microservices & APIs in Node.js, familiar with databases, templating, testing & devops."
+  href="https://jdrydn.com/" />
 
 Reference documents on things I've learned, use regularly, or keep having to look up. Focused on CLI tooling, Git, AWS,
 and TypeScript/Node - but anything goes.
