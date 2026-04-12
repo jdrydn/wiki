@@ -34,7 +34,7 @@ blunt tools. "It's a string" is not the same as "it's a UUID". "It contains a da
 timestamp from the last five seconds".
 
 So I built a library of ~30 matchers that let you assert the _shape_ of values precisely — UUIDs, ISO dates, JWTs,
-emails, numeric ranges, date tolerances — and compose them with `and`, `or`, and `not`. You drop them into `toEqual()`
+emails, numeric ranges, date tolerances — and compose them with `and`, `or`, and `not`. You drop them into `toEqual()` or `toMatchObject()`
 exactly where you'd put a literal value, and they do the right thing.
 
 <LinkBlock
