@@ -12,9 +12,9 @@ This assumes GitHub, but the same workflow applies to GitLab, BitBucket, CodeCom
 ## The flow
 
 ```
-main ─────●─────────────●─────────────── (deployed continuously)
-           \           /
-            ○───○───○─╯  feat/add-widget (squash merged)
+main ─────●───────────●─────────────── (deployed continuously)
+           \         /
+            ○───○───○  feat/add-widget (squash merged)
 ```
 
 1. Branch off `main`/`master`/default branch.
