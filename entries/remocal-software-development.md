@@ -130,18 +130,19 @@ support this.
 
 The tooling landscape is growing. Notable entries:
 
-| Tool                                                                                                                         | Stack focus    | What it does                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------- |
-| **[mirrord](https://mirrord.dev)**                                                                                           | Kubernetes     | Run a local process in the context of a remote pod    |
-| **[Telepresence](https://www.telepresence.io)**                                                                              | Kubernetes     | Two-way proxy between local & remote clusters         |
-| **[Garden](https://garden.io)**                                                                                              | Kubernetes     | Build, test & deploy from local to remote             |
-| [Tilt](https://tilt.dev)                                                                                                     | Kubernetes     | Continuous sync of local source to remote cluster     |
-| [Skaffold](https://skaffold.dev)                                                                                             | Kubernetes     | Similar — continuous deploy loop                      |
-| [DevSpace](https://www.devspace.sh)                                                                                          | Kubernetes     | Similar, with stronger dev-container focus            |
-| **[SST](https://sst.dev)**                                                                                                   | AWS serverless | Per-developer stacks as first-class workflow          |
-| [AWS SAM Accelerate](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/using-sam-cli-sync.html) | AWS serverless | `sam sync` for fast per-developer iteration           |
-| [Serverless Framework](https://www.serverless.com/framework/docs/providers/aws/cli-reference/dev)                            | AWS serverless | `serverless dev` for fast per-developer iteration     |
-| [Docker](https://www.docker.com/blog/remocal-minimum-viable-models-ai/)                                                      | Local-first AI | Promotes "Remocal + Minimum Viable Models" for AI dev |
+| Tool                                                                                                                         | Stack focus    | What it does                                               |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------------------------------------------------------- |
+| **[mirrord](https://mirrord.dev)**                                                                                           | Kubernetes     | Run a local process in the context of a remote pod         |
+| **[Telepresence](https://www.telepresence.io)**                                                                              | Kubernetes     | Two-way proxy between local & remote clusters              |
+| **[Garden](https://garden.io)**                                                                                              | Kubernetes     | Build, test & deploy from local to remote                  |
+| [Tilt](https://tilt.dev)                                                                                                     | Kubernetes     | Continuous sync of local source to remote cluster          |
+| [Skaffold](https://skaffold.dev)                                                                                             | Kubernetes     | Similar — continuous deploy loop                           |
+| [DevSpace](https://www.devspace.sh)                                                                                          | Kubernetes     | Similar, with stronger dev-container focus                 |
+| **[SST](https://sst.dev)**                                                                                                   | AWS serverless | Per-developer stacks as first-class workflow               |
+| [AWS SAM Accelerate](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/using-sam-cli-sync.html) | AWS serverless | `sam sync` for fast per-developer iteration                |
+| [Serverless Framework](https://www.serverless.com/framework/docs/providers/aws/cli-reference/dev)                            | AWS serverless | `serverless dev` to run functions locally connected to AWS |
+| [Ampt](https://www.getampt.com/docs/environments/#developer-sandboxes)                                                       | AWS serverless | `ampt` for a developer-sandbox deployment                  |
+| [Docker](https://www.docker.com/blog/remocal-minimum-viable-models-ai/)                                                      | Local-first AI | Promotes "Remocal + Minimum Viable Models" for AI dev      |
 
 Remocal is also how most mature serverless teams have worked for years, often without calling it that — per-developer
 stacks against a shared dev account is the default for teams using CDK, SST, Serverless Framework or SAM at any scale.
