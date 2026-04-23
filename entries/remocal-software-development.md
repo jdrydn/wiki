@@ -140,6 +140,7 @@ The tooling landscape is growing. Notable entries:
 | [DevSpace](https://www.devspace.sh)                                                                                          | Kubernetes     | Similar, with stronger dev-container focus            |
 | **[SST](https://sst.dev)**                                                                                                   | AWS serverless | Per-developer stacks as first-class workflow          |
 | [AWS SAM Accelerate](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/using-sam-cli-sync.html) | AWS serverless | `sam sync` for fast per-developer iteration           |
+| [Serverless Framework](https://www.serverless.com/framework/docs/providers/aws/cli-reference/dev)                            | AWS serverless | `serverless dev` for fast per-developer iteration     |
 | [Docker](https://www.docker.com/blog/remocal-minimum-viable-models-ai/)                                                      | Local-first AI | Promotes "Remocal + Minimum Viable Models" for AI dev |
 
 Remocal is also how most mature serverless teams have worked for years, often without calling it that — per-developer
