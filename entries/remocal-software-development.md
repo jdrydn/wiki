@@ -1,4 +1,4 @@
-# Remocal
+# Remocal Software Development
 
 Remocal (**rem**ote + l**ocal**) is a developer workflow where your code lives on your machine, but your app runs where
 it's meant to — in the cloud, in containers, on edge networks, or wherever your users actually hit. Build locally,
