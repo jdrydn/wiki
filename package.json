@@ -19,6 +19,7 @@
     "glob": "^13.0.6",
     "tailwindcss": "^4.2.2",
     "vitepress": "2.0.0-alpha.17",
+    "vitepress-plugin-llms": "^1.13.1",
     "vitepress-sidebar": "^1.33.1"
   }
 }
