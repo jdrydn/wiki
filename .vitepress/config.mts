@@ -1,4 +1,4 @@
-import llmstxt from 'vitepress-plugin-llms'
+import llmstxt from 'vitepress-plugin-llms';
 import tailwind from '@tailwindcss/vite';
 import { defineConfig } from 'vitepress';
 import { generateSidebar } from 'vitepress-sidebar';
@@ -69,6 +69,15 @@ export default defineConfig({
       tailwind(),
       llmstxt({
         generateLLMsFullTxt: false,
+        ignoreFiles: [
+          // Repository files
+          'readme.md',
+          'license.md',
+          // Index files
+          'archived.md',
+          'entries.md',
+          'markdown-examples.md',
+        ],
       }),
     ],
   },
