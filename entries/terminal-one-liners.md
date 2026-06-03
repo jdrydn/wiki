@@ -1,3 +1,7 @@
+---
+description: A handy collection of useful command-line one-liners worth remembering.
+---
+
 # Terminal One Liners
 
 A handy page to list useful command-line one-liners!

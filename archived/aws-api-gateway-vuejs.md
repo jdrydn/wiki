@@ -1,3 +1,7 @@
+---
+description: Serve a Vue SPA through AWS API Gateway via CloudFormation.
+---
+
 # AWS API-Gateway → VueJS
 
 Serve a Vue SPA through API-Gateway.

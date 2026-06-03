@@ -1,3 +1,7 @@
+---
+description: A small inline JavaScript snippet for dynamically loading scripts after page load.
+---
+
 # JS - An inline loader
 
 One upon a time, this was needed to load Javascript files on the frontend, after the page had fully loaded.

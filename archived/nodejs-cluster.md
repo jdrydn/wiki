@@ -1,3 +1,7 @@
+---
+description: Using the Node.js cluster module to fork workers across CPU cores and distribute work.
+---
+
 # NodeJS - Cluster
 
 ```js

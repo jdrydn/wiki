@@ -1,3 +1,7 @@
+---
+description: Installing and getting started with Homebrew, the macOS and Linux package manager.
+---
+
 # Homebrew - Getting Started
 
 ## What is Homebrew?

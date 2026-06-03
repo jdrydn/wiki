@@ -1,3 +1,7 @@
+---
+description: A simple, opinionated Git workflow - one long-lived branch, short-lived feature branches, squash merges, continuous delivery.
+---
+
 # Git Way of Working
 
 A simple, opinionated workflow for teams shipping continuously. One long-lived branch, short-lived feature branches,

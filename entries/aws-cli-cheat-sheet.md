@@ -1,3 +1,7 @@
+---
+description: A handful of useful AWS CLI v2 one-liners - profiles, S3, EC2, IAM, Lambda, and CloudFormation.
+---
+
 # AWS CLI One-Liners
 
 <LinkBlock

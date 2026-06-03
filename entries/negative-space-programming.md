@@ -1,3 +1,7 @@
+---
+description: Negative space programming - reject invalid state with assertions and guards instead of defensive branching.
+---
+
 # Don't If, Assert
 
 **Negative space programming** is the practice of defining valid program state by aggressively rejecting invalid state,

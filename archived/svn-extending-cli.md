@@ -1,3 +1,7 @@
+---
+description: Wrapping the SVN CLI with a Bash function to add tagging and other common workflows.
+---
+
 # SVN - Extending the CLI
 
 Extending SVN's features to include common tasks such as tagging.

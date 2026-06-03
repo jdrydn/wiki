@@ -1,3 +1,7 @@
+---
+description: Step-by-step guide to identifying, partitioning, formatting, and mounting disks on Linux.
+---
+
 # (Linux) Mounting Disks
 
 This is so difficult every time. Let's note this down.

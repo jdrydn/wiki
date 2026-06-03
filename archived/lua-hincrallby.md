@@ -1,3 +1,7 @@
+---
+description: A Redis Lua script to increment every field of a hash by a given value in one round trip.
+---
+
 # Lua - HINCRALLBY
 
 Grab your shovels, that Redis instance won't be around much longer.

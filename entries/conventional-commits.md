@@ -1,3 +1,7 @@
+---
+description: The Conventional Commits format - quick examples of feat, fix, scopes, and breaking changes.
+---
+
 # Conventional Commits
 
 <LinkBlock

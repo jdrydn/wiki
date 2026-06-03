@@ -1,3 +1,7 @@
+---
+description: Short-lived, isolated deployments - one per developer, one per PR - running against real cloud infrastructure.
+---
+
 # Ephemeral Environments
 
 Short-lived, isolated deployments of your application - one per developer, one per PR - running side-by-side in the same

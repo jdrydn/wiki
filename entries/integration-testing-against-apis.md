@@ -1,3 +1,7 @@
+---
+description: Why integration tests against real APIs beat mocks, and patterns for writing them.
+---
+
 # Integration Testing Against APIs
 
 Integration tests that hit real, running services catch things unit tests never will. Schema drift, serialization bugs,

@@ -1,3 +1,7 @@
+---
+description: Know your customer - practices for building a great developer experience around your API.
+---
+
 # KYC Developer Experience
 
 [Know your customer] enough to create a good experience for their developers.

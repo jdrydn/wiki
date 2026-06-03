@@ -1,3 +1,7 @@
+---
+description: Remote + local - edit code on your machine, run the app against real cloud infrastructure.
+---
+
 # Remocal Software Development
 
 Remocal (**rem**ote + l**ocal**) is a developer workflow where your code lives on your machine, but your app runs where

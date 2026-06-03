@@ -1,3 +1,7 @@
+---
+description: The 2021 OWASP Top 10 web application security risks - what each one is, a vulnerable example, and a fix.
+---
+
 # OWASP Top 10
 
 <LinkBlock

@@ -1,3 +1,7 @@
+---
+description: Example GraphQL queries sketching what a Calendar App backend API could look like.
+---
+
 # Calendar Platform (Idea)
 
 The following are some example usage queries to how I think a GraphQL Backend-API should work for a Calendar App.
