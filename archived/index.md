@@ -13,6 +13,6 @@ import { data as items } from './index.data';
 
 <ul>
   <li v-for="post of items">
-    <a :href="post.url">{{ post.frontmatter.title }}</a>
+    <a :href="post.url">{{ post.frontmatter.title }}</a>: <small>{{ post.frontmatter.description }}</small>
   </li>
 </ul>
