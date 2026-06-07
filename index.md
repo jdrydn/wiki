@@ -44,6 +44,12 @@ Topics lean towards:
 - **AWS & cloud infrastructure** — services, patterns, tradeoffs I've worked through
 - **TypeScript & Node** — syntax references, gotchas, setup decisions
 
+### LLM support
+
+This site has [an auto-generated `llms.txt` file](/llms.txt) for your favourite AI tooling to scan, and each entry has a
+Markdown equivalent for AI models to consume (replace `.html` with `.md` for a human preview) (e.g.
+[entries/negative-space-programming.md](/entries/negative-space-programming.md))
+
 ## Why a public wiki
 
 Partly so I can find things again. Partly because if I had to figure it out, someone else probably does too.
