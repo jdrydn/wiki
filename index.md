@@ -44,7 +44,7 @@ Topics lean towards:
 - **AWS & cloud infrastructure** — services, patterns, tradeoffs I've worked through
 - **TypeScript & Node** — syntax references, gotchas, setup decisions
 
-### LLM support
+### LLM support
 
 This site has [an auto-generated `llms.txt` file](/llms.txt) for your favourite AI tooling to scan, and each entry has a
 Markdown equivalent for AI models to consume (replace `.html` with `.md` for a human preview) (e.g.
