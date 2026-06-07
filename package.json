@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vitepress dev",
+    "dev": "vitepress dev --port 5173",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview --port 5173"
   },
   "keywords": [],
   "author": "",
