@@ -64,6 +64,20 @@ export default defineConfig({
       permalink: undefined,
     },
   },
+  async transformPageData(pageData) {
+    if (pageData.relativePath.startsWith('entries/') || pageData.relativePath.startsWith('archived/')) {
+      pageData.frontmatter.head ??= [];
+      pageData.frontmatter.head.push([
+        'link',
+        {
+          rel: 'alternate',
+          type: 'text/markdown',
+          href: '/' + pageData.relativePath,
+          title: 'Markdown version',
+        },
+      ]);
+    }
+  },
   vite: {
     plugins: [
       tailwind(),
